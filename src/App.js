@@ -1,6 +1,10 @@
 import Form from "./Components/Form"
 import { useState } from "react"
 import Person from './Components/Person'
+import styled from "styled-components"
+import { Header } from "./Styles/Styles"
+
+
 const App = () => {
   const [persons, setPersons] = useState([])
   const [nameInput, setNameInput] = useState('')
@@ -13,13 +17,19 @@ const App = () => {
   }
   const handleSubmit = (e) => {
     e.preventDefault()
-    setPersons([...persons, {name: nameInput, age: ageInput}])
+    setPersons([...persons, {name: nameInput, age: ageInput, finished: false}])
     setAgeInput('')
     setNameInput('')
   }
+  const completed = (index) => {
+    let items = [...persons]
+    let update = items[index]
+    update.finished = true
+    setPersons(items)
+  }
   return (
     <div>
-      <h1>my form</h1>
+      <Header>my form</Header>
       <Form 
         handleSubmit={handleSubmit} 
         nameInput={nameInput} 
@@ -33,6 +43,8 @@ const App = () => {
           removeHandler={() => removeHandler(index)} 
           name={person.name} 
           age={person.age}
+          completed={() => completed(index)}
+          finished={person.finished}
             />
       })}
     </div>
