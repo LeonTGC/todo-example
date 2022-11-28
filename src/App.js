@@ -30,7 +30,7 @@ const App = () => {
   return (
     <div>
       <Header>my form</Header>
-      <Form 
+      <Form id='form'
         handleSubmit={handleSubmit} 
         nameInput={nameInput} 
         setNameInput={setNameInput}
