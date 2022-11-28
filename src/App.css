@@ -4,7 +4,8 @@
 }
 
 #header {
-  color: orange;
-  font-size: 50px;
-  border: solid salmon 3px;
+  color: pink;
+  font-size: 80px;
+  border: solid pink 3px;
+  background-color: azure;
 }
