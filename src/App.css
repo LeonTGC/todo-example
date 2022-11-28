@@ -2,3 +2,7 @@
   border: solid salmon 4px;
   background-color: rgb(103, 100, 100);
 }
+#header {
+  color: orange;
+  font-size: 50px;
+}
