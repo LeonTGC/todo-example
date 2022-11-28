@@ -2,3 +2,6 @@
   border: solid salmon 4px;
   background-color: rgb(103, 100, 100);
 }
+#heading {
+  background-color: aqua;
+}
