@@ -24,7 +24,7 @@ const App = () => {
   const completed = (index) => {
     let items = [...persons]
     let update = items[index]
-    update.finished = true
+    update.finished = !update.finished
     setPersons(items)
   }
   return (
