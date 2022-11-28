@@ -29,7 +29,8 @@ const App = () => {
   }
   return (
     <div>
-      <Header id='header'>my form</Header>
+
+      <Header id="heading">my form</Header>
       <Form id='form'
         handleSubmit={handleSubmit} 
         nameInput={nameInput} 
